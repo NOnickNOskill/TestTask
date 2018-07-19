@@ -4,9 +4,15 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group name="Group 20180703-05:35:50">
             <file>file:/C:/VT/data/TestTask/index.php</file>
-            <file>file:/C:/VT/data/TestTask/styles.css</file>
+            <file>file:/C:/VT/data/TestTask/DeleteFromDb.php</file>
             <file>file:/C:/VT/data/TestTask/AddtoDb.php</file>
+            <file>file:/C:/VT/data/TestTask/UpdateDb.php</file>
+            <file>file:/C:/VT/data/TestTask/css/styles.css</file>
+            <file>file:/C:/VT/data/TestTask/js/jquery.tablesorter.js</file>
+            <file>file:/C:/VT/data/TestTask/showDb.php</file>
             <file>file:/C:/VT/data/TestTask/Db.php</file>
+            <file>file:/C:/VT/data/TestTask/js/UpdateDb.js</file>
+            <file>file:/C:/VT/data/TestTask/js/popupJS.js</file>
         </group>
     </open-files>
 </project-private>

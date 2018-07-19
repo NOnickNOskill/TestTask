@@ -1,5 +1,5 @@
-$(document).ready(function(){
-   $('.update').click(function(){
+$("document").ready(function(){
+   $('body').on('click', '.update', function(){
        var str = document.getElementById(this.id + "row").innerHTML;
        var text = $(str).text();
        text = text.replace(/\s+/g,' ').trim();
@@ -10,19 +10,34 @@ $(document).ready(function(){
        $('#u4').val(arr[3]);
        $("#popup1").show();
        $("#popup2").hide();
+       
    });
    
-   $("#update").click(function(){
+   $('body').on('click', '#update', function(){
         var dannie = $("#uform").serialize();
         $.ajax({
             url: 'UpdateDb.php',
             type: 'POST',
             data: dannie,
             success: function() {
-                alert("Product successfully updated");
-                location.reload();
+                $.ajax({
+                    url: 'createTable.php',
+                    type: 'GET',
+                    success: function(result){
+                        $('#myTable').html(result);
+                        $.ajax({
+                                url: 'ScriptsUpdate.php',
+                                type: 'GET',
+                                success: function(result){
+                                    $('#scripts').html(result);
+                                    alert("Product successfully updated!");
+                                }
+                            });
+                    }
+                });
             }
-        }); 
+        });
+        
     });
    
 });

@@ -6,8 +6,21 @@
                    type: 'POST',
                    data: dannie,
                    success: function() {
-                      alert("New product successfully added!");
-                      location.reload();
+                    $.ajax({
+                        url: 'createTable.php',
+                        type: 'GET',
+                        success: function(result){
+                            $('#myTable').html(result);
+                            $.ajax({
+                                url: 'ScriptsUpdate.php',
+                                type: 'GET',
+                                success: function(result){
+                                    $('#scripts').html(result);
+                                    alert("New product successfully added!");
+                                }
+                            });
+                        }
+                    });
                    }
                }); 
             });

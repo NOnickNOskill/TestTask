@@ -9,24 +9,13 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="css/styles.css" type="text/css"/>
         <title>Test</title>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">
-        </script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     </head>
     <body>
         <!-- MAIN TABLE-->
-        <table border="3" id="tbl" class="tablesorter">
-            <thead>
-                <tr>
-                    <th>id</th>
-                    <th>name</th>
-                    <th>price</th>
-                    <th>rating</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php require_once 'showDb.php' ?>
-            </tbody>
-        </table>
+        <div id="myTable">
+            <?php require_once 'createTable.php'; ?>
+        </div>
         <input type="button" value="Add new" id="addNew" />
         <br>
         <!-- POPUP FOR ADDING -->
@@ -58,10 +47,9 @@
         </div>
     </body>
     <!-- SCRIPTS -->
-    <script type="text/javascript" src="js/AjaxAddtoDb.js"></script>
+    <div id="scripts"><?php require_once 'ScriptsUpdate.php'; ?></div>
     <script type="text/javascript" src="js/AjaxDeleteFromDb.js"></script>
     <script type="text/javascript" src="js/UpdateDb.js"></script>
-    <script type="text/javascript" src="js/TableSort.js"></script>
+    <script type="text/javascript" src="js/AjaxAddtoDb.js"></script>
     <script src="js/jquery.tablesorter.js" type="text/javascript"></script>
-    <script type="text/javascript" src="js/popupJS.js"></script>
 </html>
